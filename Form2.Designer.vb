@@ -37,6 +37,10 @@ Partial Class Form2
         Me.TxtPhoneNumber = New System.Windows.Forms.Label()
         Me.TxtGithub = New System.Windows.Forms.Label()
         Me.TxtStopwatch = New System.Windows.Forms.Label()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.txtSearchEmail = New System.Windows.Forms.TextBox()
+        Me.btnEdit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Prev
@@ -99,6 +103,7 @@ Partial Class Form2
         '
         'TxtNBox
         '
+        Me.TxtNBox.BackColor = System.Drawing.SystemColors.ControlDark
         Me.TxtNBox.Location = New System.Drawing.Point(353, 98)
         Me.TxtNBox.Name = "TxtNBox"
         Me.TxtNBox.ReadOnly = True
@@ -107,6 +112,7 @@ Partial Class Form2
         '
         'TxtEBox
         '
+        Me.TxtEBox.BackColor = System.Drawing.SystemColors.ControlDark
         Me.TxtEBox.Location = New System.Drawing.Point(353, 136)
         Me.TxtEBox.Name = "TxtEBox"
         Me.TxtEBox.ReadOnly = True
@@ -115,6 +121,7 @@ Partial Class Form2
         '
         'TxtPBox
         '
+        Me.TxtPBox.BackColor = System.Drawing.SystemColors.ControlDark
         Me.TxtPBox.Location = New System.Drawing.Point(353, 179)
         Me.TxtPBox.Name = "TxtPBox"
         Me.TxtPBox.ReadOnly = True
@@ -123,6 +130,7 @@ Partial Class Form2
         '
         'TxtGBox
         '
+        Me.TxtGBox.BackColor = System.Drawing.SystemColors.ControlDark
         Me.TxtGBox.Location = New System.Drawing.Point(353, 220)
         Me.TxtGBox.Multiline = True
         Me.TxtGBox.Name = "TxtGBox"
@@ -132,6 +140,7 @@ Partial Class Form2
         '
         'TxtSBox
         '
+        Me.TxtSBox.BackColor = System.Drawing.SystemColors.ControlDark
         Me.TxtSBox.Location = New System.Drawing.Point(353, 282)
         Me.TxtSBox.Multiline = True
         Me.TxtSBox.Name = "TxtSBox"
@@ -179,11 +188,51 @@ Partial Class Form2
         Me.TxtStopwatch.TabIndex = 14
         Me.TxtStopwatch.Text = "Stopwatch " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "     Time"
         '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(759, 402)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(83, 36)
+        Me.btnDelete.TabIndex = 15
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnSearch
+        '
+        Me.btnSearch.Location = New System.Drawing.Point(713, 212)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(129, 38)
+        Me.btnSearch.TabIndex = 16
+        Me.btnSearch.Text = "Search By Email"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'txtSearchEmail
+        '
+        Me.txtSearchEmail.Location = New System.Drawing.Point(713, 169)
+        Me.txtSearchEmail.Multiline = True
+        Me.txtSearchEmail.Name = "txtSearchEmail"
+        Me.txtSearchEmail.Size = New System.Drawing.Size(129, 37)
+        Me.txtSearchEmail.TabIndex = 17
+        Me.txtSearchEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btnEdit
+        '
+        Me.btnEdit.Location = New System.Drawing.Point(759, 53)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(75, 33)
+        Me.btnEdit.TabIndex = 18
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(882, 450)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.txtSearchEmail)
+        Me.Controls.Add(Me.btnSearch)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.TxtStopwatch)
         Me.Controls.Add(Me.TxtGithub)
         Me.Controls.Add(Me.TxtPhoneNumber)
@@ -222,4 +271,8 @@ Partial Class Form2
     Friend WithEvents TxtPhoneNumber As Label
     Friend WithEvents TxtGithub As Label
     Friend WithEvents TxtStopwatch As Label
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents txtSearchEmail As TextBox
+    Friend WithEvents btnEdit As Button
 End Class
