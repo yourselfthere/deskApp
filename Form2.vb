@@ -122,8 +122,13 @@ Public Class Form2
 
             If response.IsSuccessStatusCode Then
                 Dim jsonResponse As String = Await response.Content.ReadAsStringAsync()
-                Dim submission = JsonSerializer.Deserialize(Of Submission)(jsonResponse)
+                Dim result = JsonSerializer.Deserialize(Of Dictionary(Of String, JsonElement))(jsonResponse)
 
+                ' Update the currentIndex with the index of the found submission
+                currentIndex = result("index").GetInt32()
+
+                ' Update the text boxes with the submission data
+                Dim submission = JsonSerializer.Deserialize(Of Submission)(result("submission").ToString())
                 TxtNBox.Text = submission.name
                 TxtEBox.Text = submission.email
                 TxtPBox.Text = submission.phone
