@@ -11,7 +11,7 @@ This Repo contains the desktop windows App, desktop app installer and visual bas
 - Click On Clone a Repo
 - Paste the github url link in the repository location 
 - Set the path where you want to clone this repo
-- It will have a name of 'slidelybrocode' by default you can set whatever you like, click on clone.
+- It will have a name of 'deskApp' by default you can set whatever you like, click on clone.
 - in the search solution explorer you will have :
    
    -Solution 'slidelybro' (2 of 2 projects)
